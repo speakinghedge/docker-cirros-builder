@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd /root/build/cirros-0.3.3
+make ARCH=x86_64 OUT_D=/root/build/cirros-0.3.3/output/x86_64
+
+cat << EOF
+
+   Run 'cirros-build-image' to generate firmware images.
+
+EOF

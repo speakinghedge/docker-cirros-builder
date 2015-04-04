@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd /root/build/cirros-0.3.3
+make ARCH=x86_64 br-menuconfig
+
+cat << EOF
+
+   Run 'cirros-build' to update the firmware based on latest buildroot config.
+
+EOF

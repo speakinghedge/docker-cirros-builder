@@ -1,0 +1,20 @@
+
+cirros 0.3.3 image builder 
+(buildroot 2015.2, uClib 0.33.2, busybox 1.23.1, gcc 4.8.4)
+
+support commands: 
+  
+  cirros-build                - build cirros firmware
+  cirros-build-image          - build cirros images
+  cirros-config-image         - config buildroot environment
+  cirros-config-image-busybox - configure busybox used within cirros
+
+To make the generated images easily available on the host machine you may
+start the instance with a shared directory attached, eg:
+
+  docker run --privileged -i \
+  	-v </my/image/output/>:/root/build/cirros-0.3.3/output/x86_64/images/ \
+  	-t hecke/cirros_x86_64_builder
+
+Note: This container must be run in privileged mode since it uses loop-mounts.
+

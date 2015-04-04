@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cd /root/build/cirros-0.3.3 
+./bin/bundle -v output/x86_64/rootfs.tar /root/source/linux-image-3.19.0-12-generic_3.19.0-12.12_amd64.deb output/x86_64/images
+
+cat << EOF
+
+   To test the generated image you may start it using qemu:
+
+     qemu-system-x86_64 -curses </my/image/output>/disk.img
+
+EOF
